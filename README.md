@@ -8,4 +8,8 @@ Its an eclipse scala ide project and a maven project, It can be run using mvn wi
 
     mvn scala:run -DmainClass=etf.analyzer.Program
     
-If Yahoo stock price service it may not work, wait and try and again     
+If Yahoo stock price service it may not work, wait and try and again
+
+See also
+ 
+    http://quoiquilensoit.blogspot.co.uk/2009/10/becoming-really-rich-with-scala.html      
