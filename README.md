@@ -1,6 +1,6 @@
 get-rich-with-scala
 ===================
-Updated version of this  code using scala 2.10 available in gtihub
+Updated version of this  code using scala 2.11 available in gtihub
 
     git clone https://github.com/azzoti/get-rich-with-scala.git
 
