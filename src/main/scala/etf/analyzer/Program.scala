@@ -55,12 +55,16 @@ object Program extends Using
   		  
       }
       
+      println("before await")
       cevent.await()
+      println
+      println("after await")
       
       // The using block will shut down the WebClientConnections thread pool 
     }
     
     println
+      println("before top15%")
     
     val top15perc =
       summaries
@@ -108,12 +112,12 @@ object Program extends Using
       val timeSeries = new TimeSeries(ticker, name, asset, subAsset, adjustedPrices);
       summaries(i) = timeSeries.getSummary();
       cevent.countDown()
-      printf("%s ", ticker)
+      printf("%s %s \n", ticker, cevent.getCount())
     } else {
-      printf("[%s ERROR] \n", ticker)
       //Console.WriteLine(e.Error);
       summaries(i) = Summary(ticker, name, "ERROR", "ERROR", Some(0), Some(0), Some(0), Some(0), Some(0), 0, 0, 0)
       cevent.countDown()
+      printf("[%s ERROR %s] \n", ticker, cevent.getCount())
     }
   }
   
